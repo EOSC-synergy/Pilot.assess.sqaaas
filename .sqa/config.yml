@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/DIRACGrid/Pilot git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-cerulean-coyote.sh
-        container: qc.acc_woolly-vermilion-butterfly
+        - /usr/bin/env sh .sqa/script.scaly-aquamarine-kudu.sh
+        container: qc.acc_clammy-wisteria-caracal
   QC.Doc:
     repos:
       github.com/DIRACGrid/Pilot find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-fuchsia-crane.sh
-        container: qc.doc_squeaky-lemon-rattlesnake
+        - /usr/bin/env sh .sqa/script.lovely-ultramarine-tzu.sh
+        container: qc.doc_hasty-seashell-swan
       github.com/DIRACGrid/Pilot git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-red-impala.sh
-        container: qc.doc_hazy-puce-moorhen
+        - /usr/bin/env sh .sqa/script.pokey-plum-tetra.sh
+        container: qc.doc_slaphappy-celadon-slug
       github.com/DIRACGrid/Pilot markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-denim-argentino.sh
-        container: qc.doc_cranky-olivine-chamois
+        - /usr/bin/env sh .sqa/script.geeky-aqua-whippet.sh
+        container: qc.doc_gloppy-plum-grasshopper
       github.com/DIRACGrid/Pilot restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-khaki-akbash.sh
-        container: qc.doc_scaly-cyan-toucan
+        - /usr/bin/env sh .sqa/script.surly-chestnut-wrasse.sh
+        container: qc.doc_snoopy-puce-dolphin
   QC.Lic:
     repos:
       github.com/DIRACGrid/Pilot licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-cobalt-millipede.sh
-        container: qc.lic_jumpy-linen-paradise
+        - /usr/bin/env sh .sqa/script.trippy-pear-worm.sh
+        container: qc.lic_snazzy-plum-quokka
   QC.Sec:
     repos:
       github.com/DIRACGrid/Pilot bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-zucchini-zebu.sh
-        container: qc.sec_nippy-brown-jaguar
+        - /usr/bin/env sh .sqa/script.cranky-sapphire-flamingo.sh
+        container: qc.sec_thirsty-teal-hyena
   QC.Sty:
     repos:
       github.com/DIRACGrid/Pilot flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-orange-wolverine.sh
-        container: qc.sty_nerdy-khaki-rottweiler
+        - /usr/bin/env sh .sqa/script.sleazy-ivory-akita.sh
+        container: qc.sty_snoopy-cinnabar-hare
       github.com/DIRACGrid/Pilot jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-indigo-leopard.sh
-        container: qc.sty_seedy-pear-reindeer
+        - /usr/bin/env sh .sqa/script.nerdy-cobalt-whale.sh
+        container: qc.sty_bluesy-lime-javanese
   QC.Uni:
     repos:
       github.com/DIRACGrid/Pilot pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-khaki-crocodile.sh
-        container: qc.uni_lousy-persimmon-worm
+        - /usr/bin/env sh .sqa/script.beady-champagne-slug.sh
+        container: qc.uni_lumpy-scarlet-dragonfly
   QC.Ver:
     repos:
       github.com/DIRACGrid/Pilot get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-taupe-coyote.sh
-        container: qc.ver_snappy-orchid-liger
+        - /usr/bin/env sh .sqa/script.wheezy-lime-saola.sh
+        container: qc.ver_skinny-gamboge-zorse
 timeout: 5400
