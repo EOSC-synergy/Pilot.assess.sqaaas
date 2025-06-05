@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/DIRACGrid/Pilot:
+      branch: master
+      repo: https://github.com/DIRACGrid/Pilot
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/DIRACGrid/Pilot git:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-cerulean-coyote.sh
+        container: qc.acc_woolly-vermilion-butterfly
+  QC.Doc:
+    repos:
+      github.com/DIRACGrid/Pilot find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-fuchsia-crane.sh
+        container: qc.doc_squeaky-lemon-rattlesnake
+      github.com/DIRACGrid/Pilot git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-red-impala.sh
+        container: qc.doc_hazy-puce-moorhen
+      github.com/DIRACGrid/Pilot markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-denim-argentino.sh
+        container: qc.doc_cranky-olivine-chamois
+      github.com/DIRACGrid/Pilot restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-khaki-akbash.sh
+        container: qc.doc_scaly-cyan-toucan
+  QC.Lic:
+    repos:
+      github.com/DIRACGrid/Pilot licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-cobalt-millipede.sh
+        container: qc.lic_jumpy-linen-paradise
+  QC.Sec:
+    repos:
+      github.com/DIRACGrid/Pilot bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-zucchini-zebu.sh
+        container: qc.sec_nippy-brown-jaguar
+  QC.Sty:
+    repos:
+      github.com/DIRACGrid/Pilot flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-orange-wolverine.sh
+        container: qc.sty_nerdy-khaki-rottweiler
+      github.com/DIRACGrid/Pilot jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-indigo-leopard.sh
+        container: qc.sty_seedy-pear-reindeer
+  QC.Uni:
+    repos:
+      github.com/DIRACGrid/Pilot pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-khaki-crocodile.sh
+        container: qc.uni_lousy-persimmon-worm
+  QC.Ver:
+    repos:
+      github.com/DIRACGrid/Pilot get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-taupe-coyote.sh
+        container: qc.ver_snappy-orchid-liger
+timeout: 5400
